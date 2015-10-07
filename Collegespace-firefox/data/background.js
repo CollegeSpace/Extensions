@@ -11,7 +11,7 @@ function getTimeDiff(date){
 }
 
 function fillResponse(result){
-    var today_posts = document.getElementById("today");
+	var today_posts = document.getElementById("today");
 	var last_week_posts = document.getElementById("last_week");
 	var old_posts = document.getElementById("old_posts");
 	var count_today = 0;
