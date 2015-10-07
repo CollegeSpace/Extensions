@@ -23,12 +23,12 @@ function fillResponse(result){
 			var div = document.createElement("div");
 			div.innerHTML = html;
 			today_posts.appendChild(div);
+            count_today++;
 		}
 		else if(getTimeDiff(entry.date)<604800){
 			var div = document.createElement("div");
 			div.innerHTML = html;
 			last_week_posts.appendChild(div);
-            count_today++;
 		}
 		else{
 			var div = document.createElement("div");
@@ -36,7 +36,7 @@ function fillResponse(result){
 			old_posts.appendChild(div);
 		}
 	}
-    self.port.emit('count',4);
+    self.port.emit('count',count_today);
     document.write(html);
 	html += "</ul>";
 }

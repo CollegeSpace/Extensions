@@ -10,6 +10,13 @@ var panel = panels.Panel({
     onHide: handleHide
 });
 
+function handleChange(state) {
+    if (state.checked) {
+        panel.show({
+            position: button
+        });
+    }
+}
 var button = ToggleButton({
     id: "cs-button",
     label: "CollegeSpace",
@@ -19,24 +26,13 @@ var button = ToggleButton({
         "64": "./icon-64.png"
     },
     badge: 0,
-    onReady: getBadge,
     onChange: handleChange
 });
 
-function getBadge(worker){
-    console.log("Testing");
-    worker.port.on('count', function(count) {
-        button.badge = count;
-    });
-}
+panel.port.on('count',function(count){
+    button.badge = count;
+});
 
-function handleChange(state) {
-    if (state.checked) {
-        panel.show({
-            position: button
-        });
-    }
-}
 
 function handleHide() {
     button.state('window', {checked: false});
