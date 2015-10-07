@@ -14,7 +14,7 @@ function fillResponse(result){
     var today_posts = document.getElementById("today");
 	var last_week_posts = document.getElementById("last_week");
 	var old_posts = document.getElementById("old_posts");
-    var count_today = 0;
+	var count_today = 0;
 	var html = "<ul>";
 	for (var i = 0; i < result.length; i++) {
 		var entry = result[i];
@@ -36,8 +36,8 @@ function fillResponse(result){
 			old_posts.appendChild(div);
 		}
 	}
-    self.port.emit('count',count_today);
-    document.write(html);
+	self.port.emit('count',count_today);
+	document.write(html);
 	html += "</ul>";
 }
 
@@ -46,8 +46,8 @@ var url = "http://updates.collegespace.in/wp-json/posts?filter[posts]=10&filter[
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 xmlhttp.onreadystatechange = function() {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        var resp = JSON.parse(xmlhttp.responseText);
-        fillResponse(resp);
-    }
+	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+		var resp = JSON.parse(xmlhttp.responseText);
+		fillResponse(resp);
+	}
 }
