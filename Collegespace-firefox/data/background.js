@@ -23,7 +23,7 @@ function fillResponse(result){
 			var div = document.createElement("div");
 			div.innerHTML = html;
 			today_posts.appendChild(div);
-            count_today++;
+			count_today++;
 		}
 		else if(getTimeDiff(entry.date)<604800){
 			var div = document.createElement("div");
