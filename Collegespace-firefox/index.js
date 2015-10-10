@@ -29,11 +29,13 @@ var button = ToggleButton({
     onChange: handleChange
 });
 
-panel.port.on('count',function(count){
+panel.port.on('count', function(count) {
     button.badge = count;
 });
 
 
 function handleHide() {
-    button.state('window', {checked: false});
+    button.state('window', {
+        checked: false
+    });
 }
