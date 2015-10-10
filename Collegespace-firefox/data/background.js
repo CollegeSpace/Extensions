@@ -1,7 +1,3 @@
-function translate(str){
-	return str.replace("_"," ");
-}
-
 function getTimeDiff(date){
 	var newDate = new Date(date);
 	var time = newDate.getTime();
@@ -15,30 +11,32 @@ function fillResponse(result){
 	var last_week_posts = document.getElementById("last_week");
 	var old_posts = document.getElementById("old_posts");
 	var count_today = 0;
-	var html = "<ul>";
 	for (var i = 0; i < result.length; i++) {
 		var entry = result[i];
-		html = "<li>" + "<a href='" + entry.link + "' target='_blank'>" + entry.title + "</a></li>";
+        var listItem = document.createElement("li");
+        var a = document.createElement("a");
+        a.setAttribute("href", entry.link);
+        a.setAttribute("target", "_blank");
+        a.appendChild(document.createTextNode(entry.title));
+        listItem.appendChild(a);
 		if(getTimeDiff(entry.date)<86400){
 			var div = document.createElement("div");
-			div.innerHTML = html;
+			div.appendChild(listItem);
 			today_posts.appendChild(div);
 			count_today++;
 		}
 		else if(getTimeDiff(entry.date)<604800){
 			var div = document.createElement("div");
-			div.innerHTML = html;
+			div.appendChild(listItem);
 			last_week_posts.appendChild(div);
 		}
 		else{
 			var div = document.createElement("div");
-			div.innerHTML = html;
+			div.appendChild(listItem);
 			old_posts.appendChild(div);
 		}
 	}
 	self.port.emit('count',count_today);
-	document.write(html);
-	html += "</ul>";
 }
 
 var xmlhttp = new XMLHttpRequest();
