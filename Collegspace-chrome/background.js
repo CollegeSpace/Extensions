@@ -25,8 +25,8 @@ function translate(str){
 function getTimeDiff(date){
 	var newDate = new Date(date);
 	var time = newDate.getTime();
-	var actulTime = new Date();
-	var diffTime = Math.round(actulTime.getTime()/1000 - time/1000);
+	var actualTime = new Date();
+	var diffTime = Math.round(actualTime.getTime()/1000 - time/1000);
 	return diffTime;
 }
 
