@@ -23,10 +23,20 @@ function translate(str){
  * @return - time difference(number of seconds) between the given time(passed as an argument) and the current time
  */
 function getTimeDiff(date){
+	
+	// create a JS Date object from the given date
 	var newDate = new Date(date);
+	
+	// get timestamp from the above Date object
 	var time = newDate.getTime();
+	
+	// create another JS Date object (if no argument is passed, it returns uses the current time/date)
 	var actualTime = new Date();
+	
+	// find time difference (number of seconds)
 	var diffTime = Math.round(actualTime.getTime()/1000 - time/1000);
+	
+	// return the time difference
 	return diffTime;
 }
 
