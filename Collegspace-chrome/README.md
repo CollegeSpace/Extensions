@@ -1,11 +1,8 @@
 CollegeSpace-chrome
 ===================
-<a href="https://chrome.google.com/webstore/detail/collegespace-updates/bfjkaomeafhpdfkehhanboekmfknpmhj" target="_blank">
-  ![Current version on the Chrome Web Store](https://img.shields.io/chrome-web-store/v/bfjkaomeafhpdfkehhanboekmfknpmhj.svg "Current version on the Chrome Web Store")
-</a>
-<a href="https://chrome.google.com/webstore/detail/collegespace-updates/bfjkaomeafhpdfkehhanboekmfknpmhj" target="_blank">
-  ![Rating on the Chrome Web Store](https://img.shields.io/chrome-web-store/rating/bfjkaomeafhpdfkehhanboekmfknpmhj.svg "Rating on the Chrome Web Store")
-</a>
+
+[![Current version on the Chrome Web Store](https://img.shields.io/chrome-web-store/v/bfjkaomeafhpdfkehhanboekmfknpmhj.svg "Current version on the Chrome Web Store")](https://chrome.google.com/webstore/detail/collegespace-updates/bfjkaomeafhpdfkehhanboekmfknpmhj)
+[![Rating on the Chrome Web Store](https://img.shields.io/chrome-web-store/rating/bfjkaomeafhpdfkehhanboekmfknpmhj.svg "Rating on the Chrome Web Store")](https://chrome.google.com/webstore/detail/collegespace-updates/bfjkaomeafhpdfkehhanboekmfknpmhj)
 
 A chrome extension by CollegeSpace to allow you to access all the latest updates, news and notices with just one click.
 
